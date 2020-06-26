@@ -6,11 +6,11 @@ La aplicación utilizara el concepto de colas para el manejo de la concurrencia.
 
 Requiere Golang 1.14  
 
-** Build Go webapp and start the server  **
+**Build Go webapp and start the server**
 <pre>  cd /SOPES1_PROJECT2/ClieteGo</pre>     
 <pre>  go run main.go </pre>  
 
-** Host and port  **
+**Host and port**
 <pre>  localhost:8080</pre> 
 
 
@@ -28,11 +28,11 @@ Cuando se ejecute el programa de Go se pregunta lo siguiente:
 
 Requiere Golang 1.14  
 
-** Build Go web server and start **
+**Build Go web server and start**
 <pre>  cd /SOPES1_PROJECT2/ServidorWebGo </pre>     
 <pre>  go run main.go </pre>  
 
-** Host and port **  
+**Host and port**  
 <pre>  localhost:7070</pre>  
 
 Esta parte contiene un servicio POST que recibe un JSON del cliente. El JSON tiene la siguiete estructura: 
