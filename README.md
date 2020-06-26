@@ -2,12 +2,12 @@
 El proyecto consiste en crear un sitio web que muestre los datos enviados en tiempo real con ayuda de dos balanceador de carga, Docker Compose, kubernetes y las bases de datos de Mongodb y Redis.
 La aplicación utilizara el concepto de colas para el manejo de la concurrencia. Se debera de transmitir la información mediante diferentes nodos, cada uno con implementado con tecnología diferente.
 
-#ClienteGo
+# ClienteGo
 
 Requiere Golang 1.14  
 
-#Build Go webapp and start the server  
-<pre>  cd /SOPES1_PROJECT2/ClieteGo     
+# Build Go webapp and start the server  
+<pre>  cd /SOPES1_PROJECT2/ClieteGo</pre>     
 <pre>  go run main.go </pre>  
 
 #Host and port  
@@ -24,12 +24,12 @@ Cuando se ejecute el programa de Go se pregunta lo siguiente:
 4) Ruta del archivo que se desea cargar
 
 
-#ServidorWebGo
+# ServidorWebGo
 
 Requiere Golang 1.14  
 
-#Build Go web server and start 
-<pre>  cd /SOPES1_PROJECT2/ServidorWebGo     
+# Build Go web server and start 
+<pre>  cd /SOPES1_PROJECT2/ServidorWebGo </pre>     
 <pre>  go run main.go </pre>  
 
 #Host and port  
@@ -37,8 +37,8 @@ Requiere Golang 1.14
 
 Esta parte contiene un servicio POST que recibe un JSON del cliente. El JSON tiene la siguiete estructura: 
 
-{
-	
+<pre>
+{	
 "url":"localhost:7070/postDatos",
 "solicitudes": "5",
 "hilos":"5"
@@ -71,4 +71,6 @@ Esta parte contiene un servicio POST que recibe un JSON del cliente. El JSON tie
 ]
 
 }
+
+</pre>
 
