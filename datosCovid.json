@@ -1,0 +1,26 @@
+[
+	{	"Nombre":"Nombre1",
+		"Departamento":"Guatemala",
+		"Edad":111,
+		"Forma de contagio":"comunitario",
+		"Estado": "Activo"
+	},
+	{	"Nombre":"Nombre2",
+		"Departamento":"Guatemala",
+		"Edad":222,
+		"Forma de contagio":"comunitario",
+		"Estado": "Activo"
+	},
+	{	"Nombre":"Nombre3",
+		"Departamento":"Guatemala",
+		"Edad":333,
+		"Forma de contagio":"comunitario",
+		"Estado": "Activo"
+	},
+	{	"Nombre":"Nombre4",
+		"Departamento":"Guatemala",
+		"Edad":444,
+		"Forma de contagio":"comunitario",
+		"Estado": "Activo"
+	}
+]
