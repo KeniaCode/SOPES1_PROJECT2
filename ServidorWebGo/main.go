@@ -40,7 +40,7 @@ func inicio(w http.ResponseWriter, r *http.Request) {
 func postData(w http.ResponseWriter, r *http.Request) {
     w.Header().Set("Content-Type", "application/json")
 	w.WriteHeader(http.StatusCreated)
-    w.Write([]byte(`{"message": "servicio post inicializado"}`))
+    w.Write([]byte(`{"message": "Post Called"}`))
 
     var persona Persona
     //Leemos el JSON que recibimos

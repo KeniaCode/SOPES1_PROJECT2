@@ -103,6 +103,7 @@ func makeThreads(listaPersonas []Persona, solicitudes int, hilos int, url string
 
 func makePost(persons []Persona, init int, cant int,url string){
 	//println("Entro al FOR, init: " + strconv.Itoa(init) + ", cant: "+strconv.Itoa(cant))
+
 	for i := init; i < cant; i++ {
 		jsonData, _ := json.Marshal(persons[i])
 		_, err := http.Post(url, "application/json", bytes.NewBuffer(jsonData))
