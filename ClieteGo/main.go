@@ -8,8 +8,11 @@ import (
 	"log"
 	"net/http"
 	"strconv"
+	"strings"
+	"sync"
 	"time"
 )
+
 
 
 type Welcome struct {
@@ -17,21 +20,15 @@ type Welcome struct {
 	Time string
 }
 
-type Datos struct {
-	Url string
-	Hilos int
-	Solicitudes int
-	Ruta string
-	ArrayDatos []Persona
+type Persona struct {
+	Nombre string `json:"nombre"`
+	Departamento string `json:"departamento"`
+	Edad int `json:"edad"`
+	Forma_contagio string `json:"forma_contagio"`
+	Estado string `json:"estado"`
 }
 
-type Persona struct {
-	Nombre string
-	Departamento string
-	Edad int
-	Forma string `json:"Forma de contagio"`
-	Estado string
-}
+var mensaje string
 
 func main() {
 	welcome := Welcome{"Anonymous", time.Now().Format(time.Stamp)}
@@ -55,9 +52,9 @@ func main() {
 }
 
 func getData(w http.ResponseWriter, r *http.Request) {
-	//Leemos los parametros que vienen en la URL
+	//Leemos los parametros que vienen en la URL que recibimos del JS
 	w.Header().Set("Content-Type", "application/json")
-	w.WriteHeader(http.StatusOK)
+	//w.WriteHeader(http.StatusOK)
 	query := r.URL.Query()
 	url := query.Get("url") //filters="color"
 	hilos,_ := strconv.Atoi( query.Get("hilos") )
@@ -67,55 +64,57 @@ func getData(w http.ResponseWriter, r *http.Request) {
 	//Leemos el archivo JSON
 	manejadorDeArchivo, err := ioutil.ReadFile(ruta)
 	if err != nil {
-		log.Fatal(err)
+		log.Panic(err)
 	}
+
+	newContents := strings.Replace(string(manejadorDeArchivo), "Forma de contagio", "forma_contagio", -1)
+
 
 	//Parseamos el JSON a la estructura Persona
-	objPersona := []Persona{}
-	err = json.Unmarshal(manejadorDeArchivo, &objPersona)
+	listaObjPersona := []Persona{}
+	err = json.Unmarshal([]byte(newContents), &listaObjPersona)
 	if err != nil {
-		log.Fatal(err)
+		log.Panic(err)
 	}
 
-	//Creamos un objeto con los datos a enviar al balanceador
-	infoObj := Datos{
-		Url:   url,
-		Hilos:  hilos,
-		Solicitudes: solicitudes,
-		Ruta: ruta,
-		ArrayDatos: objPersona,
-	}
+	makeThreads(listaObjPersona,solicitudes, hilos, url);
+	//w.Write([]byte(`{"message":"`+ mensaje +`"}`))
 
-	//Convertimos la estructura a un JSON
-	jsonResponse, errorjson := json.Marshal(infoObj)
-	if errorjson != nil {
-		http.Error(w, errorjson.Error(), http.StatusInternalServerError)
-		return
-	}
-
-	//imprimimos el JSON en consola
-	println(string(jsonResponse))
-
-	//Hacemos petición POST al balanceador
-	clienteHttp := &http.Client{}
-	peticion, err := http.NewRequest("POST", url, bytes.NewBuffer([]byte(jsonResponse)))
-	if err != nil {
-		log.Fatalf("Error creando petición: %v", err)
-	}
-
-	peticion.Header.Add("Content-Type", "application/json")
-	respuesta, err := clienteHttp.Do(peticion)
-	if err != nil {
-		log.Fatalf("Error haciendo petición: %v", err)
-	}
-
-	//Leemos la respuesta de la petición POST
-	defer respuesta.Body.Close()
-	cuerpoRespuesta, err := ioutil.ReadAll(respuesta.Body)
-	if err != nil {
-		log.Fatalf("Error leyendo respuesta: %v", err)
-	}
-	println(string(cuerpoRespuesta))
 }
 
+
+func makeThreads(listaPersonas []Persona, solicitudes int, hilos int, url string){
+	cant := solicitudes / hilos
+	var syncc sync.WaitGroup
+	syncc.Add(hilos)
+	println("INICA HILOS")
+	for i := 0; i < hilos; i++ {
+		if(i == hilos-1){
+			go makePost(listaPersonas, cant*i, solicitudes, url)
+		}else{
+			go makePost(listaPersonas, cant*i, cant*(i+1), url)
+		}
+		syncc.Done()
+	}
+	println("Termina Hilos")
+	syncc.Wait()
+
+}
+
+func makePost(persons []Persona, init int, cant int,url string){
+	println("Entro al FOR, init: " + strconv.Itoa(init) + ", cant: "+strconv.Itoa(cant))
+	for i := init; i < cant; i++ {
+		jsonData, _ := json.Marshal(persons[i])
+		_, err := http.Post(url, "application/json", bytes.NewBuffer(jsonData))
+		if err != nil {
+			mensaje = "ERROR: no se realizó POST correctamente: " + err.Error()
+			log.Panic("Error al momento de enviar la información: %s\n", err)
+		}else{
+			println("Enviando hilo, persona: " + persons[i].Nombre)
+			mensaje = "Hilos enviados correctamente "
+
+		}
+		time.Sleep(time.Millisecond * 10)
+	}
+}
 

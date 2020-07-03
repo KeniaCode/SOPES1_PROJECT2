@@ -1,7 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="d9caa521-0e7f-4923-a0b8-7c4dd769fa81" name="Default Changelist" comment="" />
+    <list default="true" id="d9caa521-0e7f-4923-a0b8-7c4dd769fa81" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../AppPhyton/app.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ServerPhyton/app.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/static/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/js/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ServidorWebGo/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/../ServidorWebGo/main.go" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -15,7 +42,11 @@
     </option>
   </component>
   <component name="GOROOT" path="/snap/go/current" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
   <component name="ProjectId" id="1dhodPAuGyppfVUz4eHgO8mcN85" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -24,10 +55,11 @@
     <property name="DefaultGoTemplateProperty" value="Go File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="go.import.settings.migrated" value="true" />
     <property name="go.sdk.automatically.set" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../ServidorWebGo" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../sopes1p2-master/cliente" />
     <property name="settings.editor.selected.configurable" value="configurable.group.tools" />
   </component>
   <component name="RecentsManager">
@@ -62,6 +94,18 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="2" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
   <component name="WindowStateProjectService">
     <state x="440" y="145" width="524" height="502" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1592886926289">
       <screen x="49" y="27" width="1317" height="741" />
@@ -75,45 +119,45 @@
       <screen x="49" y="27" width="1317" height="741" />
     </state>
     <state width="564" height="478" key="DebuggerActiveHint/49.27.1317.741@49.27.1317.741" timestamp="1593045250665" />
-    <state x="490" y="154" width="424" height="484" key="FileChooserDialogImpl" timestamp="1593148572874">
+    <state x="490" y="154" width="424" height="484" key="FileChooserDialogImpl" timestamp="1593725410720">
       <screen x="49" y="27" width="1317" height="741" />
     </state>
-    <state x="490" y="154" width="424" height="484" key="FileChooserDialogImpl/49.27.1317.741@49.27.1317.741" timestamp="1593148572874" />
-    <state width="1271" height="175" key="GridCell.Tab.0.bottom" timestamp="1593055110438">
+    <state x="490" y="154" width="424" height="484" key="FileChooserDialogImpl/49.27.1317.741@49.27.1317.741" timestamp="1593725410720" />
+    <state width="1271" height="144" key="GridCell.Tab.0.bottom" timestamp="1593752447065">
       <screen x="49" y="27" width="1317" height="741" />
     </state>
-    <state width="1271" height="175" key="GridCell.Tab.0.bottom/49.27.1317.741@49.27.1317.741" timestamp="1593055110438" />
-    <state width="1271" height="175" key="GridCell.Tab.0.center" timestamp="1593055110437">
+    <state width="1271" height="144" key="GridCell.Tab.0.bottom/49.27.1317.741@49.27.1317.741" timestamp="1593752447065" />
+    <state width="1271" height="144" key="GridCell.Tab.0.center" timestamp="1593752447065">
       <screen x="49" y="27" width="1317" height="741" />
     </state>
-    <state width="1271" height="175" key="GridCell.Tab.0.center/49.27.1317.741@49.27.1317.741" timestamp="1593055110437" />
-    <state width="1271" height="175" key="GridCell.Tab.0.left" timestamp="1593055110437">
+    <state width="1271" height="144" key="GridCell.Tab.0.center/49.27.1317.741@49.27.1317.741" timestamp="1593752447065" />
+    <state width="1271" height="144" key="GridCell.Tab.0.left" timestamp="1593752447064">
       <screen x="49" y="27" width="1317" height="741" />
     </state>
-    <state width="1271" height="175" key="GridCell.Tab.0.left/49.27.1317.741@49.27.1317.741" timestamp="1593055110437" />
-    <state width="1271" height="175" key="GridCell.Tab.0.right" timestamp="1593055110438">
+    <state width="1271" height="144" key="GridCell.Tab.0.left/49.27.1317.741@49.27.1317.741" timestamp="1593752447064" />
+    <state width="1271" height="144" key="GridCell.Tab.0.right" timestamp="1593752447065">
       <screen x="49" y="27" width="1317" height="741" />
     </state>
-    <state width="1271" height="175" key="GridCell.Tab.0.right/49.27.1317.741@49.27.1317.741" timestamp="1593055110438" />
-    <state width="1271" height="148" key="GridCell.Tab.1.bottom" timestamp="1593055110429">
+    <state width="1271" height="144" key="GridCell.Tab.0.right/49.27.1317.741@49.27.1317.741" timestamp="1593752447065" />
+    <state width="1271" height="148" key="GridCell.Tab.1.bottom" timestamp="1593727851566">
       <screen x="49" y="27" width="1317" height="741" />
     </state>
-    <state width="1271" height="148" key="GridCell.Tab.1.bottom/49.27.1317.741@49.27.1317.741" timestamp="1593055110429" />
-    <state width="1271" height="148" key="GridCell.Tab.1.center" timestamp="1593055110427">
+    <state width="1271" height="148" key="GridCell.Tab.1.bottom/49.27.1317.741@49.27.1317.741" timestamp="1593727851566" />
+    <state width="1271" height="148" key="GridCell.Tab.1.center" timestamp="1593727851566">
       <screen x="49" y="27" width="1317" height="741" />
     </state>
-    <state width="1271" height="148" key="GridCell.Tab.1.center/49.27.1317.741@49.27.1317.741" timestamp="1593055110427" />
-    <state width="1271" height="148" key="GridCell.Tab.1.left" timestamp="1593055110426">
+    <state width="1271" height="148" key="GridCell.Tab.1.center/49.27.1317.741@49.27.1317.741" timestamp="1593727851566" />
+    <state width="1271" height="148" key="GridCell.Tab.1.left" timestamp="1593727851566">
       <screen x="49" y="27" width="1317" height="741" />
     </state>
-    <state width="1271" height="148" key="GridCell.Tab.1.left/49.27.1317.741@49.27.1317.741" timestamp="1593055110426" />
-    <state width="1271" height="148" key="GridCell.Tab.1.right" timestamp="1593055110428">
+    <state width="1271" height="148" key="GridCell.Tab.1.left/49.27.1317.741@49.27.1317.741" timestamp="1593727851566" />
+    <state width="1271" height="148" key="GridCell.Tab.1.right" timestamp="1593727851566">
       <screen x="49" y="27" width="1317" height="741" />
     </state>
-    <state width="1271" height="148" key="GridCell.Tab.1.right/49.27.1317.741@49.27.1317.741" timestamp="1593055110428" />
-    <state x="196" y="31" key="SettingsEditor" timestamp="1593045367303">
+    <state width="1271" height="148" key="GridCell.Tab.1.right/49.27.1317.741@49.27.1317.741" timestamp="1593727851566" />
+    <state x="196" y="31" key="SettingsEditor" timestamp="1593675154838">
       <screen x="49" y="27" width="1317" height="741" />
     </state>
-    <state x="196" y="31" key="SettingsEditor/49.27.1317.741@49.27.1317.741" timestamp="1593045367303" />
+    <state x="196" y="31" key="SettingsEditor/49.27.1317.741@49.27.1317.741" timestamp="1593675154838" />
   </component>
 </project>
