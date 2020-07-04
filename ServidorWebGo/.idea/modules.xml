@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/../ServidorGoGrpc/.idea/ServidorGoGrpc.iml" filepath="$PROJECT_DIR$/../ServidorGoGrpc/.idea/ServidorGoGrpc.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/ServidorWebGo.iml" filepath="$PROJECT_DIR$/.idea/ServidorWebGo.iml" />
     </modules>
   </component>
 </project>

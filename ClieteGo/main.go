@@ -96,7 +96,7 @@ func makeThreads(listaPersonas []Persona, solicitudes int, hilos int, url string
 		}
 		syncc.Done()
 	}
-	println("Termina Hilos")
+	println("TERMINA HILOS")
 	syncc.Wait()
 
 }
@@ -108,12 +108,11 @@ func makePost(persons []Persona, init int, cant int,url string){
 		jsonData, _ := json.Marshal(persons[i])
 		_, err := http.Post(url, "application/json", bytes.NewBuffer(jsonData))
 		if err != nil {
-			mensaje = "ERROR: no se realizó POST correctamente: " + err.Error()
+			println( "ERROR: no se realizó POST correctamente: " + err.Error())
 			log.Panic("Error al momento de enviar la información: %s\n", err)
 		}else{
 			println("Enviando hilo, persona: " + persons[i].Nombre)
 			mensaje = "Hilos enviados correctamente "
-
 		}
 		time.Sleep(time.Millisecond * 10)
 	}

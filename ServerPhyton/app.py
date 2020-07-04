@@ -16,9 +16,10 @@ class postData(Resource):
         print("Recibiendo datos: ")
         print(request.json)
         # hacemosel POST a la base de datos
-        response = requests.post('http://104.197.133.195:3000/addToredis', data=request.json)
-        print("Respuesta de la base de datos: \n")
-        print(response.text)
+
+        #response = requests.post('http://104.197.133.195:3000/addToredis', data=request.json)
+        #print("Respuesta de la base de datos: \n")
+        #print(response.text)
         return {'status': 'Nuevo dato agregado'}
 
 
