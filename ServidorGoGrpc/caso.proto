@@ -1,19 +1,24 @@
-syntax="proto3";
+
+syntax = "proto3";
+
 package main;
 
-message Datos{
-    string nombre = 1;
-    string departamento = 2;
-    string edad = 3;
-    string forma_contagio = 4;
-    string estado = 5;
+service Caso {
+  rpc CrearCasos (CasoRequest) returns (CasoReply) {}
 }
 
-message Respuesta{
-    bool Enviado = 1;
-    string msg = 2;
+message CasoRequest {
+   CasoItem casos = 1;
 }
 
-service ServicioDatos{
-    rpc obtenerDatos(Datos) returns (Respuesta);
+message CasoItem {
+  string nombre = 1;
+  string departamento = 2;
+  int32  edad = 3;
+  string forma_contagio = 4;
+  string estado = 5;
+}
+
+message CasoReply {
+  string mensaje = 1;
 }

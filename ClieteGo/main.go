@@ -47,7 +47,7 @@ func main() {
 	})
 
 	http.HandleFunc("/getData", getData)
-
+	log.Println("Starting server. Listening on port 8080.")
 	http.ListenAndServe(":8080", nil)
 }
 
@@ -64,7 +64,7 @@ func getData(w http.ResponseWriter, r *http.Request) {
 	//Leemos el archivo JSON
 	manejadorDeArchivo, err := ioutil.ReadFile(ruta)
 	if err != nil {
-		log.Panic(err)
+		log.Println(err)
 	}
 
 	newContents := strings.Replace(string(manejadorDeArchivo), "Forma de contagio", "forma_contagio", -1)
@@ -74,7 +74,7 @@ func getData(w http.ResponseWriter, r *http.Request) {
 	listaObjPersona := []Persona{}
 	err = json.Unmarshal([]byte(newContents), &listaObjPersona)
 	if err != nil {
-		log.Panic(err)
+		log.Println(err)
 	}
 
 	makeThreads(listaObjPersona,solicitudes, hilos, url);
@@ -109,7 +109,7 @@ func makePost(persons []Persona, init int, cant int,url string){
 		_, err := http.Post(url, "application/json", bytes.NewBuffer(jsonData))
 		if err != nil {
 			println( "ERROR: no se realizó POST correctamente: " + err.Error())
-			log.Panic("Error al momento de enviar la información: %s\n", err)
+			log.Println("Error al momento de enviar la información: %s\n", err)
 		}else{
 			println("Enviando hilo, persona: " + persons[i].Nombre)
 			mensaje = "Hilos enviados correctamente "
